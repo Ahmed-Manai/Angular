@@ -1,27 +1,29 @@
-# AngularV1
+# Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
+An early Angular 10 learning app: routing between two pages, component state and data binding, and a service that loads data over HTTP.
 
-## Development server
+## What it shows
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- **Routing:** `/` shows the user page and `/about` the about page (`RouterModule.forRoot`).
+- **Component state and binding:** `UserComponent` holds a profile (name, age, email, address and hobbies), shows it in the template, and lets you add a hobby or edit the profile.
+- **HTTP service:** `DataService` uses `HttpClient` to load posts from [JSONPlaceholder](https://jsonplaceholder.typicode.com/posts), and the user page lists them.
 
-## Code scaffolding
+## Run it
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Requires Node.js and the Angular CLI 10.
 
-## Build
+```bash
+npm install
+ng serve
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Then open http://localhost:4200/.
 
-## Running unit tests
+```text
+src/app/
+  components/user/    profile, hobbies and posts
+  components/about/   about page
+  Services/           DataService (HttpClient)
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+For a recent Angular project, see [nexadash](https://github.com/Ahmed-Manai/nexadash) (Angular 21, standalone components, Material 3).
